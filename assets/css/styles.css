@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 3.5rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #F5F7FA;
+    position: fixed;
+    border-bottom: 0.5px rgba(76, 175, 79, 0.1) solid;
+}
+
+header .logo {
+    width: 111.49px;
+}
+
+header .mn-sc {
+    display: none;
+}
+
+/* header .navbar {
+    gap: 2rem;
+    display: flex;
+} */
+
+header .navbar a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: #18191F;
+    display: inline-block;
+    margin-left: 25px;
+    transition: ease-out 0.4s;
+
+}
+
+header .login {
+    width: 77px;
+    height: 40px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 6px;
+    background: #F5F7FA;
+    color: #4CAF4F;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+header .signUp {
+    width: 91px;
+    height: 40px;
+    border-radius: 6px;
+    color: #F5F7FA;
+    background: #4CAF4F;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+header .mn-sc .fa-user,
+.menu-bar {
+    font-size: 1.4rem;
+    color: #4CAF4F;
+    cursor: pointer;
+}
+
+.fa-x {
+    font-size: 1.2rem;
+    color: #4CAF4F;
+    cursor: pointer;
+    transition: ease-in .045s;
+}
+
+@media (max-width:1124px) {
+    header {
+        padding: 1.2rem 2rem;
+        transition: ease 0.4s;
+    }
+
+    header .navbar a {
+        font-size: 14.5px;
+        transition: ease 0.4s;
+    }
+
+    header .signUp {
+        width: 91px;
+        height: 35px;
+        border-radius: 4px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width:980px) {
+
+    header {
+        border-bottom: 2px rgba(76, 175, 79, 0.2) solid;
+
+    }
+
+    header .cta {
+        display: none;
+    }
+
+    header .mn-sc {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    header .navbar {
+        position: absolute;
+        /* top: 102%; */
+        left: 0;
+        width: 100%;
+        background: #F5F7FA;
+        padding: 0rem 2rem;
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+        top: -700%;
+        transition: ease 0.65s;
+        transform: scale(0);
+    }
+
+    /* header .navbar::before {
+        transform: scale(0);
+        transition: 0.8s;
+    } */
+
+    .navbar.active {
+        transform: scale(1);
+        display: block;
+        top: 102%;
+    }
+
+    header .navbar a {
+        display: block;
+        margin: 1.5rem 0;
+    }
+
+}
+
+@media (max-width:375px) {
+    header {
+        padding: 1.2rem 1.5rem;
+    }
+
+    header .navbar {
+        padding: 0rem 1.5rem;
+    }
+
+    header .logo {
+        width: 100px;
+    }
+
+    header .mn-sc .fa-user,
+    .menu-bar {
+        font-size: 1.3rem;
+        color: #4CAF4F;
+        cursor: pointer;
+    }
+
+    header .mn-sc {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+}
